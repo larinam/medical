@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+    <form action="/add_patient" method="POST">
+        <span>Имя</span> <input type="text" name="name"/> <br/>
+        <span>Возраст</span> <input type="text" name="age"/> <br/>
+        <input type="submit"/>
+    </form>
+
+
+    <ul>
+    {% for e in patients %}
+        <li><a href="/patient/{{ e._id }}">{{ e.name }}</a>, {{ e.age }}, {{ e.state }}</li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

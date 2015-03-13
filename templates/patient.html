@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+    <span>{{ p.name }}, {{ p.state }}</span>
+    <form action="/patient/{{ p._id }}/gone">
+        <input type="submit" value="Gone"/>
+    </form>
+    <form action="/patient/{{ p._id }}/delete">
+        <input type="submit" value="Delete"/>
+    </form>
+</body>
+</html>
